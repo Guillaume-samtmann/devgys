@@ -19,8 +19,8 @@
         <ul class="navbar__links">
             <li class="navbar__link first"><a href="index.php">Accueil</a></li>
             <li class="navbar__link second"><a href="#lesactivites">Nos activitées</a></li>
-            <li class="navbar__link third"><a href="form_recherche.php">Sciage</a></li>
-            <li class="navbar__link seven"><a href="./admin/admin.php">Contact</a></li>
+            <li class="navbar__link third"><a href="#valeurs">Nos valeurs</a></li>
+            <li class="navbar__link four"><a href="#articles">Nos articles</a></li>
         </ul>
         <button class="burger">
             <span class="bar"></span>
@@ -52,7 +52,7 @@
          de gros-œuvre. Les entreprises du bâtiment construisent des édifices industriels, commerciaux ou des habitations. Une grande part
         des tâches qui incombent aux métiers du bâtiment sont la réparation, la restauration, la réhabilitation et la construction.
         </p>
-        <button><a href="#lesactivites">En savoir plus !</a></button>
+        <button><a class="lebutton" href="#lesactivites">En savoir plus !</a></button>
     </div>
     <div id="lesactivites">
         <div class="gros-oeuvre">
@@ -100,6 +100,59 @@
 
         </div>
     </div>
+    <div id="articles">
+        <h1>Nos articles :</h1>
+        <?php
+            $conn = new PDO('mysql:host=localhost;dbname=articlebase;charset=UTF8;', 'admin', '14AZbd487');
+            $conn->query('SET NAMES utf8;');
+            $totalarticleReq = "SELECT COUNT(*) as total FROM article";
+            $totalarticleResult = $conn->query($totalarticleReq);
+            $totalarticleRow = $totalarticleResult->fetch(PDO::FETCH_ASSOC);
+            $totalarticle = $totalarticleRow['total'];
+
+            // Nombre de DVD à afficher par page
+            $articlePerPage = 2;
+
+            // Calcul du nombre total de pages
+            $totalPages = ceil($totalarticle / $articlePerPage);
+
+            // Récupération du numéro de page courant à partir du paramètre GET
+            $currentPage = isset($_GET['page']) ? $_GET['page'] : 1;
+
+            // Calcul de l'offset pour la requête SQL
+            $offset = ($currentPage - 1) * $articlePerPage;
+
+            // Requête SQL avec la pagination
+            $req = "SELECT * FROM article LIMIT $offset, $articlePerPage";
+            $resultat = $conn->query($req);
+
+            
+            foreach ($resultat as $value){
+                echo '<div class="lesarticles">';
+                    echo '<p class="titreacticle">'.$value['titrearticle']. '</p> <br>';
+                    echo '<p class="contenuartilce">'.$value['contenuarticle']. '</p>';
+                echo '</div>';
+            }
+            
+            // Affichage de la pagination
+        echo '<div id="pagination">';
+        if ($totalPages > 1) {
+        for ($i = 1; $i <= $totalPages; $i++) {
+            $activeClass = ($i == $currentPage) ? 'active' : '';
+            echo '<a href="?page='.$i.'" class="'.$activeClass.'">'.$i.'</a>';
+        }
+    }
+    echo '</div>';
+        
+        ?>
+    </div>
+    <footer>
+        <p>&copy; guillaume samtmann</p>
+        <div class="lesreseaux">
+            <a class="reseaux" href="https://www.facebook.com/devguys.fr/"><img src="img/facebook.png" alt=""></a>
+            <a class="reseaux" href="https://www.linkedin.com/company/devguys/"><img src="img/linkedin.png" alt=""></a>
+        </div>
+    </footer>
 </main>
     
     
