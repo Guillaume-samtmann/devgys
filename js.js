@@ -6,3 +6,12 @@ function togglemenu(){
     })
 }
 togglemenu();
+
+function link(){
+    const navbar = document.querySelector('.navbar');
+    const navbar__link = document.querySelector('.navbar__links');
+    navbar__link.addEventListener('click', () => {
+ navbar.classList.toggle('show-nav');
+    })
+}
+link();

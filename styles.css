@@ -14,12 +14,15 @@ body {
     color: #efefef;
 }
 .navbar {
+    width: 100%;
+    position: fixed;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px;
     color:#f0f0f0;
     background: burlywood;
+    z-index: 99;
 }
 .navbar__links{
     display: flex;
@@ -36,7 +39,7 @@ body {
     flex-direction: column;
     width: 0;
     height:calc(100vh - 65px);
-    position: absolute;
+    position: fixed;
     top:65px ;
     right: 0;
     background: #deb887e8;
@@ -146,6 +149,8 @@ ul{
     color: rgb(230, 231, 231);
 }
 .intro p{
+    padding: 20px;
+    margin-top: 70px;
     text-align: center;
 }
 /*descriptiontabat*/
@@ -158,6 +163,7 @@ ul{
 }
 .descriptiontabat p{
     padding: 10px;
+    font-size: 1.2em;
     
 }
 .descriptiontabat button{
@@ -166,6 +172,164 @@ ul{
     width: 40%;
     border-radius: 10px;
     background: bisque; 
+}
+
+/*les activités*/
+#lesactivites{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #efefef;
+}
+
+.gros-oeuvre{
+    height: 200px;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-image: url(img/grosoeuvre.png);
+    background-size: cover;
+    border: 1px solid black;
+    border-radius: 10px;
+    transition: all .5s ease-in-out;
+}
+.gros-oeuvre p{
+    margin-top: 40px;
+    font-size: 1.2em;
+}
+.gros-oeuvre:hover{
+    scale: 0.95;
+}
+
+.sciage{
+    height: 200px;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-image: url(img/sciage.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 1px solid black;
+    border-radius: 10px;
+    transition: all .5s ease-in-out;
+}
+.sciage p{
+    margin-top: 40px;
+    font-size: 1.2em;
+}
+.sciage:hover{
+    scale: 0.95;
+}
+.carottage{
+    height: 200px;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-image: url(img/carottage.png);
+    background-size: cover;
+    border: 1px solid black;
+    border-radius: 10px;
+    transition: all .5s ease-in-out;
+}
+.carottage p{
+    margin-top: 40px;
+    font-size: 1.2em;
+}
+.carottage:hover{
+    scale: 0.95;
+}
+.demolition{
+    height: 200px;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-image: url(img/demolition.png);
+    background-size: cover;
+    border: 1px solid black;
+    border-radius: 10px;
+    transition: all .5s ease-in-out;
+}
+.demolition p{
+    margin-top: 40px;
+    font-size: 1.2em;
+}
+.demolition:hover{
+    scale: 0.95;
+}
+.curage{
+    height: 200px;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-image: url(img/curage.png);
+    background-size: cover;
+    border: 1px solid black;
+    border-radius: 10px;
+    transition: all .5s ease-in-out;
+}
+.curage p{
+    margin-top: 40px;
+    font-size: 1.2em;
+}
+.curage:hover{
+    scale: 0.95;
+}
+
+/**valeurs*/
+
+#valeurs{
+    display: flex;
+    margin-top: 50px;
+    flex-direction: column;
+    align-items: center;
+    background-color: beige;
+    margin: 40px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+.experience{
+    margin-top: 25px;
+    width: 80%;
+}
+.experience h2{
+    margin-bottom: 10px;
+}
+.rigueur{
+    margin-top: 25px;
+    width: 80%;
+}
+.rigueur h2{
+    margin-bottom: 10px;
+}
+.reactivite{
+    margin-top: 25px;
+    margin-bottom: 25px;
+    width: 80%;
+}
+.reactivite h2{
+    margin-bottom: 10px;
 }
 
 
