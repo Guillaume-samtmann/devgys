@@ -6,7 +6,7 @@
     overflow-x: hidden;
 }
 body {
-    background: antiquewhite;
+    background: #f7f7f7;
 }
 /*nabar*/
 .navbar__logo li a{
@@ -21,7 +21,7 @@ body {
     justify-content: space-between;
     padding: 10px;
     color:#f0f0f0;
-    background: burlywood;
+    background: #2f4f49;
     z-index: 99;
 }
 .navbar__links{
@@ -32,7 +32,7 @@ body {
 }
 .navbar__link a{
     text-decoration: none;
-    color:#000000;
+    color: #ffc03f;
 }
 .navbar__links{
     display: flex;
@@ -42,7 +42,7 @@ body {
     position: fixed;
     top:65px ;
     right: 0;
-    background: #deb887e8;
+    background: #2f4f49;
     transition: all .5s ease-in-out;
 }
 ul{
@@ -139,6 +139,10 @@ ul{
 }
 
 /*introduction*/
+h1 {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
 .intro{
     height: 30vh;
     background-image: url(img/intro.png);
@@ -149,12 +153,15 @@ ul{
     color: rgb(230, 231, 231);
 }
 .intro p{
+    color: #f7f7f7;
+    FONT-SIZE: 6.2em;
     padding: 20px;
     margin-top: 70px;
     text-align: center;
 }
 /*descriptiontabat*/
 .descriptiontabat{
+    margin-bottom: 50px;
     padding: 10px;
     display: flex;
     flex-direction: column;
@@ -171,16 +178,17 @@ ul{
     height: 50px;
     width: 40%;
     border-radius: 10px;
-    background: bisque; 
+    background: #3f675f;
 }
 
 .lebutton{
     text-decoration: none;
-    color: #000000;
+    color: #ffb745;
 }
 
 /*les activités*/
 #lesactivites{
+    margin-bottom: 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -220,7 +228,7 @@ ul{
     flex-direction: column;
     align-items: center;
     text-align: center;
-    background-image: url(img/sciage.png);
+    background-image: url(img/sciages.png);
     background-size: cover;
     background-repeat: no-repeat;
     border: 1px solid black;
@@ -304,28 +312,36 @@ ul{
 /**valeurs*/
 
 #valeurs{
+    color: #ffe694;
     display: flex;
     margin-top: 50px;
     flex-direction: column;
     align-items: center;
-    background-color: beige;
-    margin: 40px;
+    background-color: #3f675f;
+    margin: 40px 40px 40px 40px;
     padding: 10px;
     border: 1px solid black;
     border-radius: 10px;
 }
+#valeurs h1{
+    color: #ffc044;
+}
 .experience{
+    margin-bottom: 5px;
     margin-top: 25px;
     width: 80%;
 }
 .experience h2{
+    color: #ffc044;
     margin-bottom: 10px;
 }
 .rigueur{
+    margin-bottom: 5px;
     margin-top: 25px;
     width: 80%;
 }
 .rigueur h2{
+    color: #ffc044;
     margin-bottom: 10px;
 }
 .reactivite{
@@ -334,6 +350,7 @@ ul{
     width: 80%;
 }
 .reactivite h2{
+    color: #ffc044;
     margin-bottom: 10px;
 }
 
@@ -355,6 +372,10 @@ ul{
     font-weight: bold;
 }
 
+#pagination {
+    height: 40px;
+}
+
 #pagination a{
     color: #000000;
     padding: 10px;
@@ -365,10 +386,11 @@ ul{
 
 /*footer*/
 footer{
+    color: #ffc03f;
     padding: 5px;
     height: 8vh;
     margin-top: 25px;
-    background-color: burlywood;
+    background: #2f4f49;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -400,6 +422,9 @@ footer{
     .burger{
         display: none;
     }
+    .navbar {
+    position: initial;
+    }
     .navbar__link{
         transform:none ;
     }
@@ -428,5 +453,50 @@ footer{
     } 
     .logo img{
         width: 40%;
+    }
+    /*introduction*/
+    .intro{
+    height: 60vh;
+    }
+    /*les activités*/
+    #lesactivites {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    }
+    .gros-oeuvre {
+    height: 300px;
+    width: 30%;
+    }
+    .sciage{
+    height: 300px;
+    width: 30%;
+    }
+    .carottage{
+    height: 300px;
+    width: 30%;
+    }
+    .demolition{
+    height: 300px;
+    width: 30%;
+    }
+    .curage{
+    height: 300px;
+    width: 30%;
+    }
+    /*les articles*/
+    .lesarticles {
+    width: 40%;
+    margin-bottom: 50px;
+    }
+    /*les reseaux*/
+    .reseaux {
+    width: 5%;
+    }
+    .lesreseaux {
+    margin-right: 20px;
+    }
+    #valeurs {
+        margin: 40px 130px 40px 130px;
     }
 }

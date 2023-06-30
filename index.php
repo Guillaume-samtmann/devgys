@@ -31,9 +31,7 @@
 </header>
 <main>
     <div class="intro">
-        <p>Parce que chaque projet mérite une construction d'exception, confiez-nous vos rêves architecturaux et laissez-nous bâtir 
-            avec précision et dévouement pour façonner un avenir durable, où la qualité et l'innovation s'unissent pour ériger des édifices 
-            qui racontent votre succès et inspirent les générations à venir.
+        <p>TABAT
         </p>
     </div>
     <div class="descriptiontabat">
